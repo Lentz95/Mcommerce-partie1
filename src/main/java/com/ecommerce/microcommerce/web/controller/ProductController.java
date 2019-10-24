@@ -108,4 +108,10 @@ public class ProductController {
 	  
 	  return productDao.calculerMarge();
   }
+ 
+ @GetMapping(value = "/productsByOrder")
+ public List<Product>  trierProduitsParOrdreAlphabetique(){
+ 
+	 return productDao.findByOrderByNom();
+ }
 }
